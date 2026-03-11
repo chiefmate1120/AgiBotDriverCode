@@ -1,0 +1,11 @@
+//========================================================================
+// AX58200 MotionControl Firmware Binary File Revision History
+// File Name: AX58200_MotionControl_vX.X.X.bin
+//
+// This document describes the major changes, additions and bug fixes made 
+// to the AX58200_MotionControl_vX.X.X.bin.
+//========================================================================
+===========================
+Version 1.0.0  (2020-03-14)
+===========================
+1. First release

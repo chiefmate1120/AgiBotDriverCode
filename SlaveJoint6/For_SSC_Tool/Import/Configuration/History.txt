@@ -1,0 +1,22 @@
+//========================================================================
+// AX58200 MotorControl Configuration File Revision History
+// File Name: AsixAx58200MotorControlConfigurations.xml
+//
+// This document describes the major changes, additions and bug fixes made 
+// to the AsixAx58200MotorControlConfigurations.xml.
+//========================================================================
+=============================
+Version 1.0.0.1  (2020-08-11)
+=============================
+1. Merge import application (AX58200_MotorControl.xlsx) to this configuration.
+2. Add "DEVICE_PROFILE_TYPE" field.
+
+=============================
+Version 1.0.0.0  (2020-03-19)
+=============================
+1. First release for AX58200 MotorControl reference design.
+2. Add "ApplyAsixChange.patch":
+	- coeappl.c
+		* Correct wrong byte order of SyncMangerType object in SSC v512
+	- sdoserv.h
+		* Avoid compile warning for SODS_ClearPendingResponse()
