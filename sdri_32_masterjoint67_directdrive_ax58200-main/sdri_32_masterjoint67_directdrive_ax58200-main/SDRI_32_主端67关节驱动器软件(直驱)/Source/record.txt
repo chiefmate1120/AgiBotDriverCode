@@ -1,0 +1,39 @@
+2026/1/15:
+V1.0.0.1:
+DeviceVersion -> 1 :（DeviceVersion版本可在 ecat_def.h 文件中进行修改）
+1、修改SPI通讯为硬件SPI，测试6，7轴总通讯时间为79us，EtherCAT时间为 100us。总运行时间为179us，达到4K频率。
+
+
+2026/1/21:
+V1.0.0.1:
+DeviceVersion -> 2 :（DeviceVersion版本可在 ecat_def.h 文件中进行修改）
+1、SPI通讯未修改片选信号，导致SPI通讯异常，无法正常通讯。
+2、修改PID写入FLASH的操作，不在将PID写入FLASH，同时开机也不再读取PID，使用初始化参数。
+
+2026/1/27：
+V1.0.0.1:
+DeviceVersion -> 3 :
+1、SPI通讯10M频率过高，导致线在比较长时通讯异常，修改为8M
+2、修改不OP时的通讯
+
+
+2026/1/30:
+V1.0.0.1:
+DeviceVersion -> 4 :（DeviceVersion版本可在 ecat_def.h 文件中进行修改）
+1、修改工程配置
+将原run2#中的 fileInfoadder .\Objects\@L.bin .\FoE\@L.efw 修改为 .\GenEfw.exe  AX58200_MotorControl
+调用外部Python文件,将FOE中的预留位Reserved1[0] 修改为IBOT;
+2、增加升级校验
+在bootmdoe.c中增加 校验头“IBOT”
+3、修改EtherCAT通讯为SM同步，且在不OP时正常与下位机通讯。
+
+2026/3/17:
+V1.0.1.1:
+DeviceVersion -> 1 :（DeviceVersion版本可在 ecat_def.h 文件中进行修改）
+1.添加编码器错误检测功能，将报错更新到ErrorMessage中
+
+
+2026/5/7:
+V1.0.2.2:
+1、添加编码器心跳解析
+2、修改pid参数
